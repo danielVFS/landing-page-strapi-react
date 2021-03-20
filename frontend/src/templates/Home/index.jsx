@@ -1,6 +1,8 @@
+import * as Styled from './styles';
+
 function Home() {
   return (
-    <div className="App">
+    <div>
       <h1>Hello World</h1>
     </div>
   );
