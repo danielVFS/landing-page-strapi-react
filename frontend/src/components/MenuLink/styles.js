@@ -1,0 +1,28 @@
+import styled, { css } from 'styled-components';
+
+export const Container = styled.a`
+  ${({ theme }) => css`
+    display: block;
+    text-decoration: none;
+    font-size: ${theme.font.sizes.small};
+    padding: ${theme.font.spacings.small};
+    color: ${theme.colors.primaryColor};
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 0.2rem;
+      background: ${theme.colors.secondaryColor};
+      transition: all 300ms ease-in-out;
+    }
+
+    &:hover::after {
+      left: 25%;
+      width: 50%;
+    }
+  `}
+`;
