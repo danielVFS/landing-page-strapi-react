@@ -48,7 +48,7 @@ describe('<MenuLink />', () => {
         content: '';
         position: absolute;
         left: 50%;
-        bottom: 0;
+        bottom: 0.76rem;
         width: 0;
         height: 0.2rem;
         background: #dc143c;
