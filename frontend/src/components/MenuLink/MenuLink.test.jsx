@@ -26,14 +26,13 @@ describe('<MenuLink />', () => {
   });
 
   it('should match snapshot', () => {
-    renderTheme(
+    const { container } = renderTheme(
       <MenuLink link="www.google.com.br/" newTab={false}>
         Children
       </MenuLink>,
     );
 
-    expect(screen.getByRole('link', { name: 'Children' }))
-      .toMatchInlineSnapshot(`
+    expect(container.firstChild).toMatchInlineSnapshot(`
       .c0 {
         display: block;
         -webkit-text-decoration: none;
