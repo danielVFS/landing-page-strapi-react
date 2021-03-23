@@ -17,18 +17,24 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   h1, h2, h3, h4, h5, h6 {
-     font-family: ${({ theme }) => theme.font.family.secondary};
+    font-family: ${({ theme }) => theme.font.family.secondary};
+    margin: ${({ theme }) => theme.spacings.large} 0;
   }
 
   a {
-    text-decoration: none;
+    color: ${({ theme }) => theme.colors.secondaryColor};
   }
 
-  ul {
-    list-style: none;
+  ul, ol {
+    margin: ${({ theme }) => theme.spacings.medium};
+    padding: ${({ theme }) => theme.spacings.medium};
   }
 
   button {
     cursor: pointer;
+  }
+
+  p {
+    margin: ${({ theme }) => theme.spacings.large} 0;
   }
 `;
