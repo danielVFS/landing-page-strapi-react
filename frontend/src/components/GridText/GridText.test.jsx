@@ -2,9 +2,18 @@ import { screen } from '@testing-library/react';
 import { renderTheme } from '../../styles/render-theme';
 import { GridText } from '.';
 
-describe('<GridText />', () => {
-  it('should render', () => {
-    renderTheme(<GridText>Children</GridText>);
-    expect(screen.getByRole('heading')).toBeInTheDocument();
+import mock from './mock';
+
+describe('<GridSection />', () => {
+  it('should render with background', () => {
+    const { container } = renderTheme(<GridText {...mock} />);
+    expect(container).toMatchSnapshot();
+  });
+
+  it('should render without background', () => {
+    const { container } = renderTheme(
+      <GridText {...mock} background={undefined} />,
+    );
+    expect(container).toMatchSnapshot();
   });
 });
