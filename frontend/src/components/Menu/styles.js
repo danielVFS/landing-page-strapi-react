@@ -47,7 +47,7 @@ export const Container = styled.div`
       }
 
       & ${Heading} {
-        padding-bottom: ${theme.font.spacings.large};
+        padding-bottom: ${theme.spacings.small};
         display: flex;
         justify-content: center;
       }
@@ -64,7 +64,7 @@ export const MenuContainer = styled.div`
     @media ${theme.media.lteMedium} {
       display: block;
       text-align: center;
-      padding: ${theme.font.spacings.large} 0;
+      padding: ${theme.spacings.small} 0;
     }
   `}
 `;
