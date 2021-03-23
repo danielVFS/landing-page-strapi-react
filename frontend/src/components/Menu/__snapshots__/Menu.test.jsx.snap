@@ -125,7 +125,7 @@ exports[`<Menu /> should not render links 1`] = `
   }
 
   .c2 .c6 {
-    padding-bottom: 3.2rem;
+    padding-bottom: 1.6rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -141,7 +141,7 @@ exports[`<Menu /> should not render links 1`] = `
   .c5 {
     display: block;
     text-align: center;
-    padding: 3.2rem 0;
+    padding: 1.6rem 0;
   }
 }
 
@@ -377,7 +377,7 @@ exports[`<Menu /> should render Logo and Main menu Nav 1`] = `
   }
 
   .c2 .c6 {
-    padding-bottom: 3.2rem;
+    padding-bottom: 1.6rem;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -393,7 +393,7 @@ exports[`<Menu /> should render Logo and Main menu Nav 1`] = `
   .c5 {
     display: block;
     text-align: center;
-    padding: 3.2rem 0;
+    padding: 1.6rem 0;
   }
 }
 
