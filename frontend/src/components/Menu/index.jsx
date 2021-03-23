@@ -8,7 +8,7 @@ import { NavLinks } from '../NavLinks';
 import { Menu as MenuIcon } from '@styled-icons/material-outlined/Menu';
 import { Close as CloseIcon } from '@styled-icons/material-outlined/Close';
 
-export const Menu = ({ links, logoData }) => {
+export const Menu = ({ links = [], logoData }) => {
   const [visible, setVisible] = useState(false);
 
   return (
@@ -38,5 +38,5 @@ export const Menu = ({ links, logoData }) => {
 
 Menu.propTypes = {
   ...NavLinks.propTypes,
-  logoData: P.shape(LogoLink).isRequired,
+  logoData: P.shape(LogoLink.propTypes).isRequired,
 };
