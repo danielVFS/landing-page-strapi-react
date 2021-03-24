@@ -23,6 +23,7 @@ export const GlobalStyles = createGlobalStyle`
 
   a {
     color: ${({ theme }) => theme.colors.secondaryColor};
+    text-decoration: none;
   }
 
   ul, ol {
