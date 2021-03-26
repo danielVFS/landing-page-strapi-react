@@ -7,7 +7,7 @@
   },
   "options": {},
   "attributes": {
-    "link_txt": {
+    "link_text": {
       "type": "string",
       "required": true
     },

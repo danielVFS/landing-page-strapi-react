@@ -16,7 +16,7 @@
       "plugin": "upload",
       "required": false
     },
-    "logo_txt": {
+    "logo_text": {
       "type": "string",
       "required": true
     },
