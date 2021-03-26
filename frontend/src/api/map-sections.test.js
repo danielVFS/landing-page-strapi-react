@@ -1,6 +1,15 @@
-import { mapSectionTwoColumns } from './map-sections';
+import {
+  mapSectionTwoColumns,
+  mapSections,
+  mapSectionContent,
+} from './map-sections';
 
 describe('map-sections', () => {
+  it('should render predefined section if no data', () => {
+    const data = mapSections();
+    expect(data).toEqual([]);
+  });
+
   it('should map section two columns', () => {
     const data = mapSectionTwoColumns();
 
@@ -59,5 +68,41 @@ describe('map-sections', () => {
     expect(data.srcImg).toBe('a.svg');
     expect(data.text).toBe('abc');
     expect(data.title).toBe('title');
+  });
+
+  it('should map section two columns', () => {
+    const data = mapSectionContent();
+
+    expect(data.component).toBe('');
+    expect(data.title).toBe('');
+    expect(data.html).toBe('');
+    expect(data.background).toBe(false);
+  });
+
+  it('should map section two columns', () => {
+    const data = mapSectionContent({
+      __component: 'section.section-content',
+      _id: '602fdf2d540c00269e056173',
+      title: 'news coverage and some surprises',
+      content:
+        '<p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news</p>',
+      metadata: {
+        background: false,
+        _id: '602fdf2d540c00269e05617a',
+        name: 'intro',
+        section_id: 'intro',
+        __v: 0,
+        id: '602fdf2d540c00269e05617a',
+      },
+      __v: 1,
+      id: '602fdf2d540c00269e056173',
+    });
+
+    expect(data.component).toBe('section.section-content');
+    expect(data.title).toBe('news coverage and some surprises');
+    expect(data.html).toBe(
+      '<p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news</p>',
+    );
+    expect(data.background).toBe(false);
   });
 });
