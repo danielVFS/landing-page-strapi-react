@@ -10,7 +10,7 @@ describe('map-sections', () => {
     expect(data).toEqual([]);
   });
 
-  it('should map section two columns', () => {
+  it('should map section two columns with no data', () => {
     const data = mapSectionTwoColumns();
 
     expect(data.background).toBe(false);
@@ -21,7 +21,7 @@ describe('map-sections', () => {
     expect(data.sectionId).toBe('');
   });
 
-  it('should map section two columns', () => {
+  it('should map section two columns with data', () => {
     const data = mapSectionTwoColumns({
       __component: 'section.section-two-columns',
       _id: '602fdf2d540c00269e056178',
@@ -70,16 +70,17 @@ describe('map-sections', () => {
     expect(data.title).toBe('title');
   });
 
-  it('should map section two columns', () => {
+  it('should map section two columns with no data', () => {
     const data = mapSectionContent();
 
     expect(data.component).toBe('');
     expect(data.title).toBe('');
     expect(data.html).toBe('');
     expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('');
   });
 
-  it('should map section two columns', () => {
+  it('should map section two columns with data', () => {
     const data = mapSectionContent({
       __component: 'section.section-content',
       _id: '602fdf2d540c00269e056173',
@@ -104,5 +105,6 @@ describe('map-sections', () => {
       '<p>The release of Apple Silicon-based Macs at the end of last year generated a flurry of news</p>',
     );
     expect(data.background).toBe(false);
+    expect(data.sectionId).toBe('intro');
   });
 });

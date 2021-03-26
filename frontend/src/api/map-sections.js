@@ -38,7 +38,7 @@ export const mapSectionContent = (section = {}) => {
     __component: component = '',
     title = '',
     content: html = '',
-    metadata: { background = false } = false,
+    metadata: { background = false, section_id: sectionId = '' } = false,
   } = section;
 
   return {
@@ -46,6 +46,7 @@ export const mapSectionContent = (section = {}) => {
     title,
     html,
     background,
+    sectionId,
   };
 };
 
