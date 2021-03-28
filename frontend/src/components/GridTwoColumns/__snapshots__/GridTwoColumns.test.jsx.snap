@@ -26,7 +26,8 @@ exports[`<GridTwoColumns /> should render two column grid 1`] = `
 }
 
 .c1 {
-  max-width: 120rem;
+  max-width: 130rem;
+  width: 100%;
   margin: 0 auto;
   padding: 3.2rem;
 }
@@ -71,6 +72,7 @@ exports[`<GridTwoColumns /> should render two column grid 1`] = `
 <div>
   <div
     class="c0"
+    id=""
   >
     <div
       class="c1"
