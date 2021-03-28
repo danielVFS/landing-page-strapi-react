@@ -8,6 +8,8 @@ import { mockBase } from '../BaseTemplate/mock';
 
 import { mapData } from '../../api/map-data';
 
+import config from '../../config';
+
 import { PageNotFound } from '../PageNotFound';
 import { Loading } from '../Loading';
 
@@ -22,12 +24,12 @@ function Home() {
 
   useEffect(() => {
     const pathname = location.pathname.replace(/[^a-z0-9-_]/gi, '');
-    const slug = pathname ? pathname : 'landing-page';
+    const slug = pathname ? pathname : config.defaultSlug;
     console.log(slug);
 
     const load = async () => {
       try {
-        const data = await fetch('http://localhost:1337/pages/?slug=' + slug);
+        const data = await fetch(config.url + slug);
         const json = await data.json();
         const pageData = mapData(json);
 
@@ -39,6 +41,20 @@ function Home() {
 
     load();
   }, [location]);
+
+  useEffect(() => {
+    if (data === undefined) {
+      document.title = `Página não encontrada | ${config.siteName}`;
+    }
+
+    if (data && !data.slug) {
+      document.title = `Carregando... | ${config.siteName}`;
+    }
+
+    if (data && data.title) {
+      document.title = `${data.title}`;
+    }
+  }, [data]);
 
   if (data === undefined) {
     return <PageNotFound />;
