@@ -1,5 +1,5 @@
 export default {
-  url: 'http://localhost:1337/pages/?slug=',
+  url: 'https://strapi-landing-page-project.herokuapp.com/pages/?slug=',
   siteName: 'Landing Page',
-  defaultSlug: 'landing-page',
+  defaultSlug: 'udemy',
 };
